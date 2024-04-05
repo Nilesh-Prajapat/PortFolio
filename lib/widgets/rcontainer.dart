@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 class ReusableContainer extends StatelessWidget {
   final double height;
@@ -18,11 +16,11 @@ class ReusableContainer extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-child: child,
       decoration: BoxDecoration(
           color: Colors.grey.shade300,
           borderRadius: BorderRadius.circular(20)
       ),
+child: child,
     );
   }
 }
@@ -60,6 +58,10 @@ class ProjectContainer extends StatelessWidget {
     return Container(
 height: 200,
       width: width,
+      decoration: BoxDecoration(
+          color: Colors.grey.shade300,
+          borderRadius: BorderRadius.circular(20)
+      ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(15 , 20 , 15 , 15),
         child: Column(
@@ -76,17 +78,17 @@ crossAxisAlignment:CrossAxisAlignment.start ,
 
                   children: [
                     Text(title,style: Theme.of(context).textTheme.displayLarge,),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Text("Language: "+lang, style: Theme.of(context).textTheme.displayLarge,),
-                    SizedBox(
+                    Text("Language: $lang", style: Theme.of(context).textTheme.displayLarge,),
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(about, style: Theme.of(context).textTheme.displaySmall,),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
-                      
+
                     ),
 
 
@@ -102,14 +104,14 @@ crossAxisAlignment:CrossAxisAlignment.start ,
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             GestureDetector(
               onTap: () {
                 _launchURL(git);
               },
-              child: Row(
+              child: const Row(
                 children: [
                   Image(image: AssetImage("assets/project/github-mark.png"),width: 30,),
 
@@ -119,10 +121,6 @@ crossAxisAlignment:CrossAxisAlignment.start ,
             )
           ],
         ),
-      ),
-      decoration: BoxDecoration(
-          color: Colors.grey.shade300,
-          borderRadius: BorderRadius.circular(20)
       ),
     );
   }
@@ -150,19 +148,19 @@ class hireContainer extends StatelessWidget {
     return Container(
       height: 40,
       width: width,
+      decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(20)
+      ),
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: Center(
-          child: Text(skill,style: TextStyle(
+          child: Text(skill,style: const TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 18,
               color: Colors.white
           ),),
         ),
-      ),
-      decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(20)
       ),
     );
   }

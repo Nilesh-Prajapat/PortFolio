@@ -31,7 +31,6 @@ class _ContactUsState extends State<ContactUs> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -47,7 +46,7 @@ class _ContactUsState extends State<ContactUs> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -171,25 +170,25 @@ class _ContactUsState extends State<ContactUs> {
                                onPressed: () {
                                  _launchURL("https://www.instagram.com/its.nilesh.here/");
                                },
-                               icon: Image(image: AssetImage("assets/icons/insta.png"),height: 40,)
+                               icon: const Image(image: AssetImage("assets/icons/insta.png"),height: 40,)
                            ),
-                           SizedBox(
+                           const SizedBox(
                              width: 5,
                            ),
                            IconButton(
                                onPressed: () {
                                  _launchURL("https://github.com/HELLFIRE-NILESH");
                                },
-                               icon: Image(image: AssetImage("assets/icons/github-mark-white.png"),height: 40,)
+                               icon: const Image(image: AssetImage("assets/icons/github-mark-white.png"),height: 40,)
                            ),
-                           SizedBox(
+                           const SizedBox(
                              width: 5,
                            ),
                            IconButton(
                                onPressed: () {
                                  _sendEmail();
                                },
-                               icon: Icon(CupertinoIcons.mail,size: 42,)
+                               icon: const Icon(CupertinoIcons.mail,size: 42,)
                            ),
 
                          ],
@@ -198,7 +197,7 @@ class _ContactUsState extends State<ContactUs> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 )
               ],

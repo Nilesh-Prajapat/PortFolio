@@ -21,7 +21,7 @@ class _NavViewState extends State<NavView> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() {
         _currentIndex = 2;
         _pageController.jumpToPage(_currentIndex);

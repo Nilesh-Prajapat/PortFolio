@@ -1,13 +1,11 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:portfolio/widgets/rcontainer.dart';
 import 'package:timelines/timelines.dart';
 
 
 
 class Panel1 extends StatefulWidget {
-  const Panel1({Key? key}) : super(key: key);
+  const Panel1({super.key});
 
   @override
   State<Panel1> createState() => _Panel1State();
@@ -47,7 +45,7 @@ class _Panel1State extends State<Panel1> {
               const SizedBox(height: 15),
               Container(
 
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     border: Border(
                         bottom: BorderSide(
                             width: 1,
@@ -66,7 +64,7 @@ class _Panel1State extends State<Panel1> {
 
                   child: Text('10th',style: Theme.of(context).textTheme.labelMedium,),
                 ),
-                node: TimelineNode(
+                node: const TimelineNode(
                   position: 0.5,
                   indicatorPosition: 0.5,
 
@@ -89,7 +87,7 @@ class _Panel1State extends State<Panel1> {
 
                   child: Text('Diploma',style: Theme.of(context).textTheme.labelMedium,),
                 ),
-                node: TimelineNode(
+                node: const TimelineNode(
                   position: 0.5,
                   indicatorPosition: 0.5,
 
@@ -113,7 +111,7 @@ class _Panel1State extends State<Panel1> {
 
                   child: Text('Internship',style: Theme.of(context).textTheme.labelMedium,),
                 ),
-                node: TimelineNode(
+                node: const TimelineNode(
                   position: 0.5,
                   indicatorPosition: 0.5,
                   indicator: DotIndicator(

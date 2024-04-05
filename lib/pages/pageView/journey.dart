@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:portfolio/widgets/rcontainer.dart';
@@ -13,7 +12,6 @@ class _Panel2State extends State<Panel2> {
   String _journey = '';
 
 
-  @override
   getJourney() async{
     String journey;
     journey = await rootBundle.loadString("assets/text_files/journey.txt");
@@ -34,7 +32,6 @@ class _Panel2State extends State<Panel2> {
 
 
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
 
     return Column(
 
@@ -52,7 +49,7 @@ class _Panel2State extends State<Panel2> {
               const SizedBox(height: 15),
               Container(
 
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     border: Border(
                         bottom: BorderSide(
                             width: 1,

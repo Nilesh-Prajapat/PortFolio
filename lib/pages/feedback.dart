@@ -37,7 +37,7 @@ class _FeedBackState extends State<FeedBack> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text("Take your time and provide me your valuable feedback.",style: Theme.of(context).textTheme.headlineSmall,),
-                  SizedBox(height: 40,),
+                  const SizedBox(height: 40,),
                   Row(
                     children: [
                       Expanded(

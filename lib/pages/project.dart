@@ -13,7 +13,6 @@ class _projectState extends State<project> {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
@@ -24,11 +23,11 @@ class _projectState extends State<project> {
       ),
       body: SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: Center(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ProjectContainer(
@@ -41,7 +40,7 @@ class _projectState extends State<project> {
                 ih: 100,
                 iw: 40,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ProjectContainer(
@@ -56,7 +55,7 @@ class _projectState extends State<project> {
                 iw: 0,
 
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ProjectContainer(
@@ -70,22 +69,7 @@ class _projectState extends State<project> {
                 iw: 40,
 
               ),
-
-              SizedBox(
-                height: 20,
-              ),
-              ProjectContainer(
-                lang: "C++",
-                title: "Wifi-Jammer",
-                about: "Wifi-jammer made using Node-Mcu.",
-                git: "https://github.com/HELLFIRE-NILESH?tab=repositories",
-                width: screenWidth - 40,
-                img: "assets/project/nodemcu.png",
-                ih: 100,
-                iw: 40,
-
-              ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               )
 
