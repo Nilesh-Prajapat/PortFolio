@@ -29,13 +29,15 @@ class _FeedBackState extends State<FeedBack> {
         child: SingleChildScrollView(
           child: Container(
             width: screenWidth * 0.9, // Adjusted width
-            padding: const EdgeInsets.symmetric(horizontal: 16.0), // Reduced horizontal padding
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Form(
               key: _formKey,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Text("Take your time and provide me your valuable feedback.",style: Theme.of(context).textTheme.headlineSmall,),
+                  SizedBox(height: 40,),
                   Row(
                     children: [
                       Expanded(

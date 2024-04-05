@@ -62,7 +62,13 @@ class Texttheme {
         fontWeight: FontWeight.w900,
         color: Colors.black
 
-    )
+    ),
+    headlineSmall: TextStyle(
+        fontSize: 20,
+        fontFamily: "Schyler",
+        fontWeight: FontWeight.w500,
+        color: Colors.white
+    ),
 
   );
 }

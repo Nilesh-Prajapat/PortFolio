@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -130,7 +131,7 @@ class _ContactUsState extends State<ContactUs> {
                   height: 20,
                 ),
                 Container(
-                  height: 325,
+                  height: 310,
                   width: screenWidth - 40,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
@@ -162,33 +163,37 @@ class _ContactUsState extends State<ContactUs> {
                         const SizedBox(
                           height: 10,
                         ),
-                        RichText(
-                          text: TextSpan(
-                            style: Theme.of(context).textTheme.displayMedium,
-                            children: const[
-                              TextSpan(
-                                  text:
-                                  "If you want to discuss anything regarding this project, you can contact me on my e-mail.\nMy e-mail is:\n"),
-                              TextSpan(
-                                  text: "work.nilesh.pr@gmail.com",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: "Schyler",
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        ElevatedButton(onPressed: () {
-                          _sendEmail();
-                        },
-                            style: const ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
-                              foregroundColor: MaterialStatePropertyAll(Colors.black),
+              Text("If you want to discuss anything regarding any project, you can contact me on my e-mail or social media.",style: Theme.of(context).textTheme.displayMedium,),
+                        const SizedBox(height: 20),
+                       Row(
+                         children: [
+                           IconButton(
+                               onPressed: () {
+                                 _launchURL("https://www.instagram.com/its.nilesh.here/");
+                               },
+                               icon: Image(image: AssetImage("assets/icons/insta.png"),height: 40,)
+                           ),
+                           SizedBox(
+                             width: 5,
+                           ),
+                           IconButton(
+                               onPressed: () {
+                                 _launchURL("https://github.com/HELLFIRE-NILESH");
+                               },
+                               icon: Image(image: AssetImage("assets/icons/github-mark-white.png"),height: 40,)
+                           ),
+                           SizedBox(
+                             width: 5,
+                           ),
+                           IconButton(
+                               onPressed: () {
+                                 _sendEmail();
+                               },
+                               icon: Icon(CupertinoIcons.mail,size: 42,)
+                           ),
 
-                            ),
-                            child: const Text("Send"))
+                         ],
+                       )
                       ],
                     ),
                   ),
@@ -202,5 +207,13 @@ class _ContactUsState extends State<ContactUs> {
         ),
       ),
     );
+  }
+}
+void _launchURL(String url) async {
+  final Uri _surl= Uri.parse(url);
+  if (await launchUrl(_surl,mode: LaunchMode.externalApplication)) {
+    await canLaunchUrl(_surl);
+  } else {
+    throw 'Could not launch ';
   }
 }

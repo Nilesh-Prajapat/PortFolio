@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/rcontainer.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 class project extends StatefulWidget {
   const project({super.key});
@@ -64,7 +63,7 @@ class _projectState extends State<project> {
                 lang: "Flutter",
                 title: "PortFolio App",
                 about: "Cross platform portfolio app.         ",
-                git: "git",
+                git: "https://github.com/HELLFIRE-NILESH/PortFolio",
                 width: screenWidth - 40,
                 img: "assets/icons/flutter.png",
                 ih: 80,
@@ -79,7 +78,7 @@ class _projectState extends State<project> {
                 lang: "C++",
                 title: "Wifi-Jammer",
                 about: "Wifi-jammer made using Node-Mcu.",
-                git: "git",
+                git: "https://github.com/HELLFIRE-NILESH?tab=repositories",
                 width: screenWidth - 40,
                 img: "assets/project/nodemcu.png",
                 ih: 100,
