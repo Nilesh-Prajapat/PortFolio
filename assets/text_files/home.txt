@@ -1,0 +1,1 @@
+This project aims to create a home automation system using Blynk, NodeMCU (ESP8266), and a relay board. The system allows users to remotely control various household appliances or devices through a mobile application. By leveraging the power of the Internet of Things (IoT), users can conveniently manage their home environment from anywhere with an internet connection.

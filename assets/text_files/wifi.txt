@@ -1,0 +1,1 @@
+I built a WiFi jammer using a NodeMCU board, TP4056 charging module, and lithium battery. This device disrupts WiFi signals for educational purposes, offering insights into network security.

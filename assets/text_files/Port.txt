@@ -1,0 +1,1 @@
+This Portfolio App is a mobile application developed using Flutter. This app serves as a digital showcase of my skills, projects, experiences, and contact information.You are currently using this app.
