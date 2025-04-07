@@ -47,8 +47,8 @@
   <p>Follow these steps to run the app on an Android device:</p>
 
   <pre>
-git clone https://github.com/your-username/flutter-portfolio-app.git
-cd flutter-portfolio-app
+https://github.com/Nilesh-Prajapat/PortFolio.git
+cd PortFolio
 flutter pub get
 flutter run -d android
   </pre>
